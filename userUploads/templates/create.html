@@ -1,0 +1,14 @@
+{% extends 'home.html' %} {% block create %}
+<div class="card my-2">
+  <div class="card-header">Upload your resume</div>
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <input class="btn btn-outline-success" type="submit" value="Save" />
+    </form>
+  </div>
+</div>
+<button class="btn btn-outline-dark">
+  <a href="/home/">Refresh Rankings</a>
+</button>
+{% endblock %}
